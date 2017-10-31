@@ -6,7 +6,7 @@
 <div>1. It is said that it is import to diversify the market and to have many providers. Well, USA imports from 16 differents departments in Colombia, and Italy and Japan imports from 15 diferents departments.</div>
 <div>2. the department who has more link to countries is Risaralda. It exports to 47 countries. After Risaralda, Antioquia links to 45 coutries</div>
 <div>The vis groups zones of countries. On each group, the vis sort, from left to right, the ountry who imports more coffee. Mouseover any of the nodes in this network to see the incoming links (importations) in green and the outgoing links (exportations) in red.</div>
-<div>See <a href="indexImports.html">SortByImports</a></div>
+<div>See <a href="index.html">SortBySize</a></div>
 <style>
 
 .node {
@@ -79,7 +79,7 @@ var svg = d3.select("body").append("svg")
 var link = svg.append("g").selectAll(".link"),
     node = svg.append("g").selectAll(".node");
 
-d3.json("flare2017size.json", function(error, classes) {
+d3.json("flare2017imports.json", function(error, classes) {
   if (error) throw error;
 
   var root = packageHierarchy(classes)
