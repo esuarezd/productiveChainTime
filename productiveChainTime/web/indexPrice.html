@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- based on Stacked Area via Nest of Mike Bostock’s Block 3020685 -->
-<!-- by Edison Suarez. 2/11/2017 -->
+<!-- by Edison Suarez -->
 <meta charset="utf-8">
 <style>
 
@@ -22,12 +22,12 @@ body {
   <p>1. That's right, the production chain of the cotton, textiles and clothing industry has a greater margin of value in relation to price per ton. While the price per tonne in coffee was USD$3,493.57 on average in 2016, in cotton was USD$11,895.61 on average (3.4 times more). The ratio of price per ton follows the flowers, with $ 6,040.38 per ton, and the Cacao at $ 4,821.93.</p>
   <p>The coffee industry is a great machinery that exported in 2016 739,520 tons and meant sales for USD$ 2,583,565,044.98.
      The cotton production chain that year(2016) exported 50,565.79 tons (corresponding to 6.84% of coffee exports) had sales of USD$ 601,510,970.92 (corresponding to 23.28% of coffee sales).</p>
-  <p>The vis shows from botton to top the Vale of sales [millons of USD] from 2006 to 2017 for
+  <p>The vis shows from botton to top the value of price [USD/ton] from 2006 to 2017 for
     <img border="0" alt="blue1" src="imageBlue1.png" width="10" height="10">Chocolate (blue-darkest),
     <img border="0" alt="blue2" src="imageBlue2.png" width="10" height="10">Cotton,
     <img border="0" alt="blue3" src="imageBlue3.png" width="10" height="10">Flowers and
     <img border="0" alt="blue4" src="imageBlue4.png" width="10" height="10">Coffe (blue-lightest).</p>
-  <p>[Sales] <a href="indexVolume.html">[Volume]</a> <a href="indexPrice.html">[Price]</a></p>
+  <p><a href="index.html">[Sale]</a> <a href="indexRelation.html">[Volume]</a> [Price]</p>
 </body>
 
 <script src="//d3js.org/d3.v3.min.js"></script>
@@ -77,7 +77,7 @@ var svg = d3.select("body").append("svg")
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-d3.csv("dataSale.csv", function(error, data) {
+d3.csv("dataPrice.csv", function(error, data) {
   if (error) throw error;
 
   data.forEach(function(d) {
