@@ -17,13 +17,13 @@ body {
 
 </style>
 <body>
-  <h1>Even tought Coffee and Flowers industry are the most exported productive chain in Colombia, the production chain of Cotton is better.</h1>
+  <h1>Even tought Coffee and Flowers industry are the most exported productive chain in Colombia, the production chain of Cotton could be more profitable.</h1>
   <div>By <a href="https://github.com/esuarezd">Edison Alexis Suarez Ducon</a></div>
   <p>That's right, the production chain of the cotton, textiles and clothing industry has a greater margin of value in relation to price per ton. While the price per tonne in coffee was USD$3,493.57 on average in 2016, in cotton was USD$11,895.61 on average (3.4 times more). The ratio of price per ton follows the flowers, with $ 6,040.38 per ton, and the Cacao at $ 4,821.93.</p>
   <p>1. The coffee industry is a great machinery that exported in 2016 739,520 tons and meant sales for USD$ 2,583,565,044.98</p>
   <p>2. The cotton production chain that year(2016) exported 50,565.79 tons (corresponding to 6.84% of coffee exports) had sales of USD$ 601,510,970.92 (corresponding to 23.28% of coffee sales).
-  <p>The vis shows from botton to top the value of Volume [kilo tons] from 2006 to 2017 for Cocoa (blue-darkest), Cotton, Flowers and Coffe (blue-lightest).</p>
-  <p>[Kilo tons] <a href="indexPrice.html">[Prices]</a> and <a href="indexRelation.html">[Relation price-tons]</a></p>
+  <p>The vis shows from botton to top the value of Price [millons of USD] from 2006 to 2017 for Chocolate (blue-darkest), Cotton, Flowers and Coffe (blue-lightest).</p>
+  <p><a href="index.html">[Volume]</a> [Price] and <a href="indexRelation.html">[Relation price-tons]</a></p>
 </body>
 <script src="//d3js.org/d3.v3.min.js"></script>
 <script>
@@ -72,7 +72,7 @@ var svg = d3.select("body").append("svg")
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-d3.csv("dataVolume.csv", function(error, data) {
+d3.csv("dataPrice.csv", function(error, data) {
   if (error) throw error;
 
   data.forEach(function(d) {
