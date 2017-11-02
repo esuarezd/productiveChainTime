@@ -17,13 +17,14 @@ body {
 
 </style>
 <body>
-  <h1>Although Coffee and Flowers industry are the most exported productive chain in Colombia, the production chain of Cotton could be more profitable.</h1>
+  <h1>The industry of Cotton could be more profitable but it is having a trend of decresing its exportations.</h1>
   <div>By <a href="https://github.com/esuarezd">Edison Alexis Suarez Ducon</a></div>
-  <p>That's right, the production chain of the cotton, textiles and clothing industry has a greater margin of value in relation to price per ton. While the price per tonne in coffee was USD$3,493.57 on average in 2016, in cotton was USD$11,895.61 on average (3.4 times more). The ratio of price per ton follows the flowers, with $ 6,040.38 per ton, and the Cacao at $ 4,821.93.</p>
-  <p>1. The coffee industry is a great machinery that exported in 2016 739,520 tons and meant sales for USD$ 2,583,565,044.98</p>
-  <p>2. The cotton production chain that year(2016) exported 50,565.79 tons (corresponding to 6.84% of coffee exports) had sales of USD$ 601,510,970.92 (corresponding to 23.28% of coffee sales).
-  <p>The vis shows from botton to top the value of Relation price-tons [USD/ton] from 2006 to 2017 for Chocolate (blue-darkest), Cotton, Flowers and Coffe (blue-lightest).</p>
-  <p><a href="index.html">[Volume]</a> <a href="indexPrice.html">[Sales]</a> and [Relation price-tons]</p>
+  <p>2. Except for cotton industry, all the production chain have the trend to increate their exportations. In 2006, the industry of cotton used to export more than today. It tryed to increase its exportation since 2010. However, even tought it looks flat, the trending is to decrease too.</p>
+  <p>The coffee industry had a decrease trending from 2008 to 2011 .However, since 2012, it started to increase the exportations.
+     The flowers production has been stable in the last five years and it has a trend to increate softlly.
+     In the industry of chocolate, Since 2012, it is the production chain that is having an increase in percent higher than the others.
+  <p>The vis shows from botton to top the value of Volume [kilo tons] from 2006 to 2017 for Chocolate (blue-darkest), Cotton, Flowers and Coffe (blue-lightest).</p>
+  <p>[Volume] <a href="indexPrice.html">[Sales]</a> and <a href="indexRelation.html">[Relation price-tons]</a></p>
 </body>
 
 <script src="//d3js.org/d3.v3.min.js"></script>
@@ -73,7 +74,7 @@ var svg = d3.select("body").append("svg")
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-d3.csv("dataRelation.csv", function(error, data) {
+d3.csv("dataVolume.csv", function(error, data) {
   if (error) throw error;
 
   data.forEach(function(d) {
