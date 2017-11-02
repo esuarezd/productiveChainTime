@@ -52,7 +52,7 @@
 {"name":"flare.eastAsia.China","size":1444,"imports":["flare.colombia.Antioquia","flare.colombia.Bogota","flare.colombia.Caldas","flare.colombia.Huila","flare.colombia.Quindio","flare.colombia.Tolima"]},
 {"name":"flare.southEastAsia.Singapore","size":97,"imports":["flare.colombia.Caldas","flare.colombia.Risaralda","flare.colombia.Tolima","flare.colombia.Valle"]},
 {"name":"flare.southEastAsia.Malaysia","size":2138,"imports":["flare.colombia.Antioquia","flare.colombia.Bogota","flare.colombia.Caldas","flare.colombia.Cauca","flare.colombia.Huila","flare.colombia.Quindio","flare.colombia.Risaralda","flare.colombia.Santander","flare.colombia.Tolima","flare.colombia.Valle"]},
-{"name":"flare.southAsia.India","size":96,"imports":["flare.colombia.Caldas","flare.colombia.Cundinamarca","flare.colombia.Huila","flare.colombia.Risaralda"]},
+{"name":"flare.southEastAsia.India","size":96,"imports":["flare.colombia.Caldas","flare.colombia.Cundinamarca","flare.colombia.Huila","flare.colombia.Risaralda"]},
 {"name":"flare.WesternAsia.UnitedArabEmirates","size":199,"imports":["flare.colombia.Antioquia","flare.colombia.Caldas","flare.colombia.Cauca","flare.colombia.Quindio","flare.colombia.Risaralda"]},
 {"name":"flare.WesternAsia.Turkey","size":295,"imports":["flare.colombia.Caldas","flare.colombia.Huila","flare.colombia.Risaralda"]},
 {"name":"flare.WesternAsia.Syria","size":251,"imports":["flare.colombia.Huila","flare.colombia.Quindio","flare.colombia.Risaralda"]},
