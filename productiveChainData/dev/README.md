@@ -43,3 +43,10 @@ Canales:
 Posicion: Ordenanda de manera descendente con las manecillas del reloj.
 Color : Para cada pais de continente. Azul de manera degradada: America (azul más oscuro oscuro),..., Europa (azul las claro)
 Size: Area. Porción de los milesPesos exportados a este pasis en comparación a los demas paises.
+
+Tarea2. Stacked barchart
+Marcas: Longitud para cada cadena de produccion.
+Canales:
+Posicion: Ordenados en el eje horizontal para cada pais. y en cada pais, puestos en pila uno sobre otro.
+Color: Para cada cadena.  Azul de manera degradada: Cacao (azul más oscuro oscuro),..., Cafe (azul las claro)
+Size: Longitud numerica de cada exportacion en dolares.
