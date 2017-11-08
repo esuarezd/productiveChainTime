@@ -12,7 +12,7 @@
   <p>1. Asi es, la industria de algodon, textiles y confecciones hay una excelente relacion con Ecuador, Mexico y Peru. Estos tres paises corresponden a USD $ 198.743.824,38.
      Sin contar las ventas a Estados Unidos y Canada, las ventas en la industria del algodon son mas significativas en los demas paises de la region.</p>
   <p>La visualizacion muestra en Stacked barchart los datos de exportacones en USD de Colombia hacia los demas paises.</p>
-  <p><a href="index.html">[Principal]</a> <a href="indexAmerica.html">[America]</a> [America sin Estados Unidos] <a href="indexEuropa.html">[Europa]</a> <a href="indexAfrica.html">[Africa y Medio Oriente]</a> <a href="indexAsia.html">[Asia y Oceania]</a></p>
+  <p><a href="index.html">[Principal]</a> <a href="indexAmerica.html">[America]</a> <a href="indexEuropa.html">[Europa]</a> <a href="indexAfrica.html">[Africa y Medio Oriente]</a> <a href="indexAsia.html">[Asia y Oceania]</a></p>
 </body>
 <svg width="960" height="500"></svg>
 <script src="https://d3js.org/d3.v4.min.js"></script>
@@ -35,7 +35,7 @@ var y = d3.scaleLinear()
 var z = d3.scaleOrdinal()
     .range(["#506c8f", "#6c89ac", "#89a0bc", "#bac7d8"]);
 
-d3.csv("dataSinEEUU.csv", function(d, i, columns) {
+d3.csv("dataEuropa.csv", function(d, i, columns) {
   for (i = 1, t = 0; i < columns.length; ++i) t += d[columns[i]] = +d[columns[i]];
   d.total = t;
   return d;
