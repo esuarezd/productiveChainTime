@@ -15,12 +15,12 @@
 <body>
   <h1>La mayoria de la produccion de Cafe, Flores, Algodon y Cacao se va a Estados Unidos.</h1>
   <div>Por <a href="https://github.com/esuarezd">Edison Alexis Suarez Ducon</a></div>
-  <p>Los paises a los que mas exportamos son </p>
+  <p>Los paises a los que mas exportamos son Estados Unidos, JApon, Alemania y Canada. ASi mismo, aqui mismo en el continente también se exporta principalmente a Ecuador y Mexico.</p>
   <p>The visualizacion es un "Pipe Chart" que muestra los paises a los que mas se exporta de manera descendente y con colores asociados a los continentes.
     <img border="0" alt="blue1" src="imageBlue1.png" width="10" height="10">America,
     <img border="0" alt="blue2" src="imageBlue2.png" width="10" height="10">Asia,
     <img border="0" alt="blue3" src="imageBlue3.png" width="10" height="10">Europa.</p>
-  <p>[Principal] <a href="indexAmerica.html">[America]</a> <a href="indexVolume.html">[Volume]</a></p>
+  <p>[Principal] <a href="indexAmerica.html">[America]</a> <a href="indexEuropa.html">[Europa]</a> <a href="indexEuropa.html">[Europa]</a> <a href="indexEuropa.html">[Europa]</a> <a href="indexAfrica.html">[Africa]</a> <a href="indexAsia.html">[Asia]</a></p>
 </body>
 
 <svg width="960" height="500"></svg>
@@ -33,7 +33,7 @@ var svg = d3.select("svg"),
     radius = Math.min(width, height) / 2,
     g = svg.append("g").attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 
-var color = d3.scaleOrdinal(["#6c86ac", "#7a517a", "#8a89a6", "#6c86ac", "#8a89a6", "#8a89a6", "#8a89a6", "#7a517a", "#6c86ac", "#6c86ac"]);
+var color = d3.scaleOrdinal(["#506c8f", "#6c89ac", "#89a0bc", "#506c8f", "#89a0bc", "#89a0bc", "#89a0bc", "#6c89ac", "#506c8f", "#506c8f"]);
 
 var pie = d3.pie()
     .sort(null)
