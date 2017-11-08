@@ -1,105 +1,93 @@
 <!DOCTYPE html>
+<meta charset="utf-8">
 <style>
 
-.axis .domain {
-  display: none;
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: auto;
+  position: relative;
+  width: 960px;
+}
+
+text {
+  font: 10px sans-serif;
+}
+
+form {
+  position: absolute;
+  right: 10px;
+  top: 10px;
 }
 
 </style>
-<body>
-  <h1>Although Coffee and Flowers industry are the most exported productive chain in Colombia, the production chain of Cotton is more profitable.</h1>
-  <div>By <a href="https://github.com/esuarezd">Edison Alexis Suarez Ducon</a></div>
-  <p>1. That's right, the production chain of the cotton, textiles and clothing industry has a greater margin of value in relation to price per ton. While the price per tonne in coffee was USD$3,493.57 on average in 2016, in cotton was USD$11,895.61 on average (3.4 times more). The ratio of price per ton follows the flowers, with $ 6,040.38 per ton, and the Cacao at $ 4,821.93.</p>
-  <p>The coffee industry is a great machinery that exported in 2016 739,520 tons and meant sales for USD$ 2,583,565,044.98.
-     The cotton production chain that year(2016) exported 50,565.79 tons (corresponding to 6.84% of coffee exports) had sales of USD$ 601,510,970.92 (corresponding to 23.28% of coffee sales).</p>
-  <p>The vis shows from botton to top the value of Production Chain that each country imports from Colombia</p>
-  <p>[Top20] <a href="indexAmerica.html">[America]</a> <a href="indexEuropa.html">[Europa]</a> <a href="indexAfrica.html">[Africa]</a> <a href="indexMedioOriente.html">[Medio Oriente]</a> <a href="indexAsia.html">[Asia]</a></p>
-</body>
-<svg width="960" height="500"></svg>
-<script src="https://d3js.org/d3.v4.min.js"></script>
+<form>
+  <label><input type="radio" name="dataset" value="apples" checked> Apples</label>
+  <label><input type="radio" name="dataset" value="oranges"> Oranges</label>
+</form>
+<script src="//d3js.org/d3.v3.min.js"></script>
 <script>
 
-var svg = d3.select("svg"),
-    margin = {top: 20, right: 20, bottom: 30, left: 40},
-    width = +svg.attr("width") - margin.left - margin.right,
-    height = +svg.attr("height") - margin.top - margin.bottom,
-    g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+var width = 960,
+    height = 500,
+    radius = Math.min(width, height) / 2;
 
-var x = d3.scaleBand()
-    .rangeRound([0, width])
-    .paddingInner(0.05)
-    .align(0.1);
+var color = d3.scale.category20();
 
-var y = d3.scaleLinear()
-    .rangeRound([height, 0]);
+var pie = d3.layout.pie()
+    .value(function(d) { return d.apples; })
+    .sort(null);
 
-var z = d3.scaleOrdinal()
-    .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
+var arc = d3.svg.arc()
+    .innerRadius(radius - 100)
+    .outerRadius(radius - 20);
 
-d3.csv("data.csv", function(d, i, columns) {
-  for (i = 1, t = 0; i < columns.length; ++i) t += d[columns[i]] = +d[columns[i]];
-  d.total = t;
-  return d;
-}, function(error, data) {
+var svg = d3.select("body").append("svg")
+    .attr("width", width)
+    .attr("height", height)
+  .append("g")
+    .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
+d3.tsv("data.tsv", type, function(error, data) {
   if (error) throw error;
 
-  var keys = data.columns.slice(1);
+  var path = svg.datum(data).selectAll("path")
+      .data(pie)
+    .enter().append("path")
+      .attr("fill", function(d, i) { return color(i); })
+      .attr("d", arc)
+      .each(function(d) { this._current = d; }); // store the initial angles
 
-  data.sort(function(a, b) { return b.total - a.total; });
-  x.domain(data.map(function(d) { return d.PaisDestino; }));
-  y.domain([0, d3.max(data, function(d) { return d.total; })]).nice();
-  z.domain(keys);
+  d3.selectAll("input")
+      .on("change", change);
 
-  g.append("g")
-    .selectAll("g")
-    .data(d3.stack().keys(keys)(data))
-    .enter().append("g")
-      .attr("fill", function(d) { return z(d.key); })
-    .selectAll("rect")
-    .data(function(d) { return d; })
-    .enter().append("rect")
-      .attr("x", function(d) { return x(d.data.PaisDestino); })
-      .attr("y", function(d) { return y(d[1]); })
-      .attr("height", function(d) { return y(d[0]) - y(d[1]); })
-      .attr("width", x.bandwidth());
+  var timeout = setTimeout(function() {
+    d3.select("input[value=\"oranges\"]").property("checked", true).each(change);
+  }, 2000);
 
-  g.append("g")
-      .attr("class", "axis")
-      .attr("transform", "translate(0," + height + ")")
-      .call(d3.axisBottom(x));
-
-  g.append("g")
-      .attr("class", "axis")
-      .call(d3.axisLeft(y).ticks(null, "s"))
-    .append("text")
-      .attr("x", 2)
-      .attr("y", y(y.ticks().pop()) + 0.5)
-      .attr("dy", "0.32em")
-      .attr("fill", "#000")
-      .attr("font-weight", "bold")
-      .attr("text-anchor", "start")
-      .text("Dolares EEUU");
-
-  var legend = g.append("g")
-      .attr("font-family", "sans-serif")
-      .attr("font-size", 10)
-      .attr("text-anchor", "end")
-    .selectAll("g")
-    .data(keys.slice().reverse())
-    .enter().append("g")
-      .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
-
-  legend.append("rect")
-      .attr("x", width - 19)
-      .attr("width", 19)
-      .attr("height", 19)
-      .attr("fill", z);
-
-  legend.append("text")
-      .attr("x", width - 24)
-      .attr("y", 9.5)
-      .attr("dy", "0.32em")
-      .text(function(d) { return d; });
+  function change() {
+    var value = this.value;
+    clearTimeout(timeout);
+    pie.value(function(d) { return d[value]; }); // change the value function
+    path = path.data(pie); // compute the new angles
+    path.transition().duration(750).attrTween("d", arcTween); // redraw the arcs
+  }
 });
+
+function type(d) {
+  d.apples = +d.apples;
+  d.oranges = +d.oranges;
+  return d;
+}
+
+// Store the displayed angles in _current.
+// Then, interpolate from _current to the new angles.
+// During the transition, _current is updated in-place by d3.interpolate.
+function arcTween(a) {
+  var i = d3.interpolate(this._current, a);
+  this._current = i(0);
+  return function(t) {
+    return arc(i(t));
+  };
+}
 
 </script>

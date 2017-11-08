@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!-- based on Stacked Area via Nest of Mike Bostock’s Block 3020685 -->
+<!-- by Edison Suarez. 2/11/2017 -->
+<meta charset="utf-8">
+<style>
+
+body {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+</style>
+<body>
+  <h1>Although Coffee and Flowers industry are the most exported productive chain in Colombia, the production chain of Cotton is more profitable.</h1>
+  <div>By <a href="https://github.com/esuarezd">Edison Alexis Suarez Ducon</a></div>
+  <p>1. That's right, the production chain of the cotton, textiles and clothing industry has a greater margin of value in relation to price per ton. While the price per tonne in coffee was USD$3,493.57 on average in 2016, in cotton was USD$11,895.61 on average (3.4 times more). The ratio of price per ton follows the flowers, with $ 6,040.38 per ton, and the Cacao at $ 4,821.93.</p>
+  <p>The coffee industry is a great machinery that exported in 2016 739,520 tons and meant sales for USD$ 2,583,565,044.98.
+     The cotton production chain that year(2016) exported 50,565.79 tons (corresponding to 6.84% of coffee exports) had sales of USD$ 601,510,970.92 (corresponding to 23.28% of coffee sales).</p>
+  <p>The vis shows from botton to top the value of price [USD/ton] from 2006 to 2017 for
+    <img border="0" alt="blue1" src="imageBlue1.png" width="10" height="10">Chocolate (blue-darkest),
+    <img border="0" alt="blue2" src="imageBlue2.png" width="10" height="10">Cotton,
+    <img border="0" alt="blue3" src="imageBlue3.png" width="10" height="10">Flowers and
+    <img border="0" alt="blue4" src="imageBlue4.png" width="10" height="10">Coffe (blue-lightest).</p>
+  <p>[Price- you are here] <a href="indexSale.html">[Sale]</a> <a href="indexVolume.html">[Volume]</a></p>
+</body>
+
+<script src="//d3js.org/d3.v3.min.js"></script>
+<script>
+
+var format = d3.time.format("%m/%y");
+
+var margin = {top: 20, right: 30, bottom: 30, left: 40},
+    width = 960 - margin.left - margin.right,
+    height = 500 - margin.top - margin.bottom;
+
+var x = d3.time.scale()
+    .range([0, width]);
+
+var y = d3.scale.linear()
+    .range([height, 0]);
+
+var z = d3.scale.category20c();
+
+var xAxis = d3.svg.axis()
+    .scale(x)
+    .orient("bottom")
+    .ticks(d3.time.years);
+
+var yAxis = d3.svg.axis()
+    .scale(y)
+    .orient("left");
+
+var stack = d3.layout.stack()
+    .offset("zero")
+    .values(function(d) { return d.values; })
+    .x(function(d) { return d.date; })
+    .y(function(d) { return d.value; });
+
+var nest = d3.nest()
+    .key(function(d) { return d.key; });
+
+var area = d3.svg.area()
+    .interpolate("cardinal")
+    .x(function(d) { return x(d.date); })
+    .y0(function(d) { return y(d.y0); })
+    .y1(function(d) { return y(d.y0 + d.y); });
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+d3.csv("dataPrice.csv", function(error, data) {
+  if (error) throw error;
+
+  data.forEach(function(d) {
+    d.date = format.parse(d.date);
+    d.value = +d.value;
+  });
+
+  var layers = stack(nest.entries(data));
+
+  x.domain(d3.extent(data, function(d) { return d.date; }));
+  y.domain([0, d3.max(data, function(d) { return d.y0 + d.y; })]);
+
+  svg.selectAll(".layer")
+      .data(layers)
+    .enter().append("path")
+      .attr("class", "layer")
+      .attr("d", function(d) { return area(d.values); })
+      .style("fill", function(d, i) { return z(i); });
+
+  svg.append("g")
+      .attr("class", "x axis")
+      .attr("transform", "translate(0," + height + ")")
+      .call(xAxis);
+
+  svg.append("g")
+      .attr("class", "y axis")
+      .call(yAxis);
+});
+
+</script>
