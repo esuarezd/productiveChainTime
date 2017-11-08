@@ -32,7 +32,7 @@ var x = d3.scaleBand()
 var y = d3.scaleLinear()
     .rangeRound([height, 0]);
 
-var z = d3.scaleLogs()
+var z = d3.scaleLog()
     .range(["#506c8f", "#6c89ac", "#89a0bc", "#bac7d8"]);
 
 d3.csv("dataAmerica.csv", function(d, i, columns) {
