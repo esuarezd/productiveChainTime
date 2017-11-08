@@ -35,7 +35,7 @@ var y = d3.scaleLinear()
 var z = d3.scaleOrdinal()
     .range(["#506c8f", "#6c89ac", "#89a0bc", "#bac7d8"]);
 
-d3.csv("dataSinEEUU.csv", function(d, i, columns) {
+d3.csv("dataEEUU.csv", function(d, i, columns) {
   for (i = 1, t = 0; i < columns.length; ++i) t += d[columns[i]] = +d[columns[i]];
   d.total = t;
   return d;
