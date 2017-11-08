@@ -21,8 +21,8 @@ form {
 
 </style>
 <form>
-  <label><input type="radio" name="dataset" value="apples" checked> Apples</label>
-  <label><input type="radio" name="dataset" value="oranges"> Oranges</label>
+  <label><input type="radio" name="dataset" value="cafe" checked> cafe</label>
+  <label><input type="radio" name="dataset" value="flores"> flores</label>
 </form>
 <script src="//d3js.org/d3.v3.min.js"></script>
 <script>
@@ -34,7 +34,7 @@ var width = 960,
 var color = d3.scale.category20();
 
 var pie = d3.layout.pie()
-    .value(function(d) { return d.apples; })
+    .value(function(d) { return d.cafe; })
     .sort(null);
 
 var arc = d3.svg.arc()
@@ -61,7 +61,7 @@ d3.tsv("data.tsv", type, function(error, data) {
       .on("change", change);
 
   var timeout = setTimeout(function() {
-    d3.select("input[value=\"oranges\"]").property("checked", true).each(change);
+    d3.select("input[value=\"flores\"]").property("checked", true).each(change);
   }, 2000);
 
   function change() {
@@ -74,8 +74,8 @@ d3.tsv("data.tsv", type, function(error, data) {
 });
 
 function type(d) {
-  d.apples = +d.apples;
-  d.oranges = +d.oranges;
+  d.cafe = +d.cafe;
+  d.flores = +d.flores;
   return d;
 }
 
