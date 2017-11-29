@@ -123,6 +123,7 @@
 ,{ "name": "COL LUTERANO SAN LUCAS", "size": 1}
 ,{ "name": "COL SANTA LUISA", "size": 1}
 ,{ "name": "GIMN MILIT FUERZA AEREA DE COLOMBIA", "size": 1}
+,{ "name": "COLEGIO FRANCISCO I", "size": 1}
 ]}
 ]}
 ]}
@@ -261,6 +262,7 @@
 ,{ "name": "CENT EDUC DIST BRAVO PAEZ", "size": 1}
 ,{ "name": "LICEO FEM DE CUNDINAMARCA MERCEDES NARIÑO", "size": 1}
 ,{ "name": "CENT EDUC DIST REINO DE HOLANDA", "size": 1}
+,{ "name": "CENT EDUC DIST MARRUECOS Y MOLINOS", "size": 1}
 ]}
 ]}
 ,{ "name": "TRADICIONAL", "children":[
@@ -378,21 +380,6 @@
 ]}
 ]}
 ]}
-,{ "name": "N/A", "children":[
-{ "name": "ADUL y TRAD", "children":[
-{ "name": "OFICIAL", "children":[
-{ "name": "CENT EDUC DIST MARRUECOS Y MOLINOS", "size": 1}
-]}
-]}
-,{ "name": "TRADICIONAL", "children":[
-{ "name": "OFICIAL", "children":[
-{ "name": "CENT EDUC DIST SAN MARTIN DE PORRES", "size": 1}
-]}
-,{ "name": "NO OFICIAL", "children":[
-{ "name": "COLEGIO FRANCISCO I", "size": 1}
-]}
-]}
-]}
 ,{ "name": "SANTA FE", "children":[
 { "name": "ADUL y TRAD", "children":[
 { "name": "OFICIAL", "children":[
@@ -430,6 +417,11 @@
 { "name": "ADULTOS", "children":[
 { "name": "NO OFICIAL", "children":[
 { "name": "CENT PANAMERICANO DE CAPACITACION SEDE CHAPINERO", "size": 1}
+]}
+]}
+,{ "name": "TRADICIONAL", "children":[
+{ "name": "OFICIAL", "children":[
+{ "name": "CENT EDUC DIST SAN MARTIN DE PORRES", "size": 1}
 ]}
 ]}
 ]}
