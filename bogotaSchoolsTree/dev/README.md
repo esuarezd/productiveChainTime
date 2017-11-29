@@ -1,39 +1,54 @@
-# productiveChainTime
-Visual Analytics for temporal data of exportation of productive chain of coffee.
+# bogotaSchoolTree
+Visual Analytics for tree data of a sample of schools in Bogota.
 
-Propuesta Tarea 3 - Visualización de tiempo
+Propuesta Bono  - Visualización de arboles
 Por Edison Suarez Ducon - 201627395
 
 what: (datos)
 -------------------------
 
-dataset1: temporales de exportaciones desde 2006 de cacao:
-https://www.datos.gov.co/Agricultura-y-Desarrollo-Rural/Cadena-Productiva-Cacao-Exportaciones/chbq-w5mx
+dataset1: datos de una muestra de 200 colegios de bogota
 
-dataset2- temporales de exportaciones desde 2006 de cafe : https://www.datos.gov.co/Agricultura-y-Desarrollo-Rural/Cadena-Productiva-Caf-Exportaciones/gzwq-vje7
-
-Dataset3- temporales de exportaciones desde 2006 de Algodon : https://www.datos.gov.co/Agricultura-y-Desarrollo-Rural/Cadena-Productiva-Algod-n-Exportaciones/ttwt-pzeg
-
-Dataset4- temporales de exportaciones desde 2006 de Flores:
-https://www.datos.gov.co/Agricultura-y-Desarrollo-Rural/Cadena-Productiva-Flores-Exportaciones/hieb-cqrb
-
-Atributos del dataset-type temporal : anio,mes,CodigoPais, PaisDestino, CodigoDepartamento, DepartamentoOrigen, Partida, Cadena, Producto, CodigoUnidad, CantidadUnidad, ValorMilesCIFDol, ValorMilesPesos, ValorMilesFOBDol, VolúmenToneladas.
-Items de todos los datasets: 620.373 rows con datos correspondientes entre 2006 Enero hasta 2017 Junio.
-
+Atributos del dataset-tipo tabla :
+codigodane (ordenado ordinal),
+nombre sede (categorico),
+sector (categorico),
+s11ApC (ordenado cuantitativo),
+s11Y2016 (ordenado cuantitativo),
+eval_puntaje (ordenado cuantitativo),
+sb11Punt(ordenado cuantitativo),
+clusterAC (ordenado cuantitativo),
+fex (ordenado cuantitativo),
+idPSU (ordenado cuantitativo),
+tipo de educacion (categorico),
+direccion (categorico),
+coordenadas (ordenadas cuantitavivo)
 
 Why: tareas
 ------------------------
-Tarea1. Compare similarities. Comparar similaridades de valores de exportacion de volumen de toneladas.
-Tarea2. Compare similarities. Comparar similaridades de valores de exportacion de millones de dolares..
-Tarea3. Compare similarities. Comparar similaridades de valores de precios de cadena de produccion por tonelada en usd/toneladas.
+Tarea1. Browse path. Buscar colegios de tipo de educacion "Adultos o Jovenes de extraedad"
+Tarea2. Compare path. Comparar cantidad de colegios por localidad.
 
-- Hipotesis: SE espera un aumento de exportaciones de todos los distintos productos de cadena de exportacion.
+- Hipotesis: La cantidad de colegios debe ser proporcional a la cantidad de población a la localidad.
 
 How:
 ------------------------
-Tareas: Stacked Area Chart
-Marcas: areas para cada dataset
+Tarea1: Collapsive Tree
+Marcas: Lineas
 Canales:
-Posicion: Una para cada dataset, de abajo hacia arriba. Cacao abajo, algodón encima, despues flores y finalmente cafe.
-Color azul de manera degradada: cacao (azul más oscuro oscuro),..., cafe (azul las claro)
-Size: Lenght. Es la longitud que va desde termina el canal anterior. La longitus esta asociada con los valores de Volumen, milles de dolares, y relacion de vaor de dolares por tonelada.
+Puntos categoricos de los atributos de cada nodo con el nombre como texto.
+El nodo padre es CIUDAD. El atributo que se muestra es el nombre como texto.
+El nodo hijo de ciudad es Localidad. El atributo que se muestra es el nombre como texto.
+El nodo hijo de localidad es tipo. El atributo que se muestra es el nombre como texto.
+El nodo hijo de tipo es sector. El atributo que se muestra es el nombre como texto.
+El nodo hijo de sector es colegio. El atrobuto que se muestra es el nombre como texto.
+
+Tarea2: Cluster Dendogram
+Marcas: Lineas
+Canales:
+Puntos categoricos de los atributos de cada nodo con el nombre como texto.
+El nodo padre es CIUDAD. El atributo que se muestra es el nombre como texto.
+El nodo hijo de ciudad es Localidad. El atributo que se muestra es el nombre como texto.
+El nodo hijo de localidad es tipo. El atributo que se muestra es el nombre como texto.
+El nodo hijo de tipo es sector. El atributo que se muestra es el nombre como texto.
+El nodo hijo de sector es colegio. El atrobuto que se muestra es el nombre como texto.
