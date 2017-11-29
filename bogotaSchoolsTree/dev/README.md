@@ -43,6 +43,8 @@ El nodo hijo de localidad es tipo. El atributo que se muestra es el nombre como 
 El nodo hijo de tipo es sector. El atributo que se muestra es el nombre como texto.
 El nodo hijo de sector es colegio. El atrobuto que se muestra es el nombre como texto.
 
+Se ordenan las localidades de manera descendente por la cantidad de colegios que tiene cada uno de ellas
+
 Tarea2: Cluster Dendogram
 Marcas: Lineas
 Canales:
@@ -52,3 +54,5 @@ El nodo hijo de ciudad es Localidad. El atributo que se muestra es el nombre com
 El nodo hijo de localidad es tipo. El atributo que se muestra es el nombre como texto.
 El nodo hijo de tipo es sector. El atributo que se muestra es el nombre como texto.
 El nodo hijo de sector es colegio. El atrobuto que se muestra es el nombre como texto.
+
+Se ordenan las localidades de manera descendente por la cantidad de colegios que tiene cada uno de ellas
