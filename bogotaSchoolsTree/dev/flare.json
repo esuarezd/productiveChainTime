@@ -406,13 +406,6 @@
 ]}
 ]}
 ]}
-,{ "name": "CANDELARIA", "children":[
-{ "name": "TRADICIONAL", "children":[
-{ "name": "NO OFICIAL", "children":[
-{ "name": "COL DEL SANTISIMO ROSARIO", "size": 1}
-]}
-]}
-]}
 ,{ "name": "CHAPINERO", "children":[
 { "name": "ADULTOS", "children":[
 { "name": "NO OFICIAL", "children":[
@@ -422,6 +415,13 @@
 ,{ "name": "TRADICIONAL", "children":[
 { "name": "OFICIAL", "children":[
 { "name": "CENT EDUC DIST SAN MARTIN DE PORRES", "size": 1}
+]}
+]}
+]}
+,{ "name": "CANDELARIA", "children":[
+{ "name": "TRADICIONAL", "children":[
+{ "name": "NO OFICIAL", "children":[
+{ "name": "COL DEL SANTISIMO ROSARIO", "size": 1}
 ]}
 ]}
 ]}
