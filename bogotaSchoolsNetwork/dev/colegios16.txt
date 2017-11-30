@@ -1,7 +1,7 @@
 [
-{ "name": "bogota.PUENTE_ARANDA.INST_PEDAG_PARA_EL_DESARROLLO_INTEGRAL_CREAR","size":164,"imports":[]},
-{ "name": "bogota.PUENTE_ARANDA.COL_DIST_BENJAMIN_HERRERA","size":67,"imports":[]},
-{ "name": "bogota.PUENTE_ARANDA.CENT_EDUC_DIST_EL_JAZMIN","size":68,"imports":[]},
-{ "name": "bogota.PUENTE_ARANDA.COL_DIST_LUIS_CARLOS_GALAN_SARMIENTO","size":103,"imports":[]},
-{ "name": "bogota.PUENTE_ARANDA.CENT_EDUC_DIST_ANTONIO_JOSE_DE_SUCRE","size":284,"imports":[]},
+{ "name": "bogota.PUENTE_ARANDA.colegio.INST_PEDAG_PARA_EL_DESARROLLO_INTEGRAL_CREAR","size":164,"imports":[]},
+{ "name": "bogota.PUENTE_ARANDA.colegio.COL_DIST_BENJAMIN_HERRERA","size":67,"imports":[]},
+{ "name": "bogota.PUENTE_ARANDA.colegio.CENT_EDUC_DIST_EL_JAZMIN","size":68,"imports":[]},
+{ "name": "bogota.PUENTE_ARANDA.colegio.COL_DIST_LUIS_CARLOS_GALAN_SARMIENTO","size":103,"imports":[]},
+{ "name": "bogota.PUENTE_ARANDA.colegio.CENT_EDUC_DIST_ANTONIO_JOSE_DE_SUCRE","size":284,"imports":[]},
 ]

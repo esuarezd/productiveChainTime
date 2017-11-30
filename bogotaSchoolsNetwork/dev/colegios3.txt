@@ -1,5 +1,5 @@
 [
-{ "name": "bogota.SANTA_FE.COL_DIST_ANTONIO_JOSE_URIBE","size":210,"imports":[]},
-{ "name": "bogota.SANTA_FE.CENT_EDUC_DIST_LA_GIRALDA","size":234,"imports":[]},
-{ "name": "bogota.SANTA_FE.CENT_EDUC_DIST_MANUEL_ELKIN_PATARROYO","size":285,"imports":[]},
+{ "name": "bogota.SANTA_FE.colegio.COL_DIST_ANTONIO_JOSE_URIBE","size":210,"imports":[]},
+{ "name": "bogota.SANTA_FE.colegio.CENT_EDUC_DIST_LA_GIRALDA","size":234,"imports":[]},
+{ "name": "bogota.SANTA_FE.colegio.CENT_EDUC_DIST_MANUEL_ELKIN_PATARROYO","size":285,"imports":[]},
 ]

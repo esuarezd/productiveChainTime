@@ -1,10 +1,10 @@
 [
-{ "name": "bogota.ANTONIO_NARINIO.CENT_PANAMERICANO_DE_CAPACITACION_SEDE_RESTREPO","size":48,"imports":[]},
-{ "name": "bogota.ANTONIO_NARINIO.COL_ARTEAGA_MUNIOZ","size":125,"imports":[]},
-{ "name": "bogota.ANTONIO_NARINIO.COL_ADVENTISTA_EMMANUEL","size":176,"imports":[]},
-{ "name": "bogota.ANTONIO_NARINIO.ESC_NORMAL_SUPERIOR_NSTRA_SRA_DE_LA_PAZ","size":190,"imports":[]},
-{ "name": "bogota.ANTONIO_NARINIO.COL_DIST_GUILLERMO_LEON_VALENCIA","size":16,"imports":[]},
-{ "name": "bogota.ANTONIO_NARINIO.CENT_EDUC_DIST_ANTONIO_BARAYA","size":39,"imports":[]},
-{ "name": "bogota.ANTONIO_NARINIO.CEDIT_FRANCISCO_DE_PAULA_SANTANDER","size":62,"imports":[]},
-{ "name": "bogota.ANTONIO_NARINIO.COL_DIST_EDUC_BAS_Y_MEDIA_ATANASIO_GIRARDOT","size":91,"imports":[]},
+{ "name": "bogota.ANTONIO_NARINIO.colegio.CENT_PANAMERICANO_DE_CAPACITACION_SEDE_RESTREPO","size":48,"imports":[]},
+{ "name": "bogota.ANTONIO_NARINIO.colegio.COL_ARTEAGA_MUNIOZ","size":125,"imports":[]},
+{ "name": "bogota.ANTONIO_NARINIO.colegio.COL_ADVENTISTA_EMMANUEL","size":176,"imports":[]},
+{ "name": "bogota.ANTONIO_NARINIO.colegio.ESC_NORMAL_SUPERIOR_NSTRA_SRA_DE_LA_PAZ","size":190,"imports":[]},
+{ "name": "bogota.ANTONIO_NARINIO.colegio.COL_DIST_GUILLERMO_LEON_VALENCIA","size":16,"imports":[]},
+{ "name": "bogota.ANTONIO_NARINIO.colegio.CENT_EDUC_DIST_ANTONIO_BARAYA","size":39,"imports":[]},
+{ "name": "bogota.ANTONIO_NARINIO.colegio.CEDIT_FRANCISCO_DE_PAULA_SANTANDER","size":62,"imports":[]},
+{ "name": "bogota.ANTONIO_NARINIO.colegio.COL_DIST_EDUC_BAS_Y_MEDIA_ATANASIO_GIRARDOT","size":91,"imports":[]},
 ]

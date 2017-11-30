@@ -1,5 +1,5 @@
 [
-{ "name": "bogota.LOS_MARTIRES.COL_CRISTIANO_SEMILLA_DE_VIDA","size":255,"imports":[]},
-{ "name": "bogota.LOS_MARTIRES.CENT_EDUC_DIST_REP_DE_VENEZUELA","size":46,"imports":[]},
-{ "name": "bogota.LOS_MARTIRES.CENT_EDUC_DIST_EDUARDO_SANTOS","size":51,"imports":[]},
+{ "name": "bogota.LOS_MARTIRES.colegio.COL_CRISTIANO_SEMILLA_DE_VIDA","size":255,"imports":[]},
+{ "name": "bogota.LOS_MARTIRES.colegio.CENT_EDUC_DIST_REP_DE_VENEZUELA","size":46,"imports":[]},
+{ "name": "bogota.LOS_MARTIRES.colegio.CENT_EDUC_DIST_EDUARDO_SANTOS","size":51,"imports":[]},
 ]

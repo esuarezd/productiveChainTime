@@ -1,8 +1,8 @@
 [
-{ "name": "bogota.FONTIBON.GIMNASIO_MODELIA_REAL_-SEDE_PRINCIPAL","size":475,"imports":[]},
-{ "name": "bogota.FONTIBON.COL_DEPT_INTEGRADO_FONTIBON","size":11,"imports":[]},
-{ "name": "bogota.FONTIBON.CENT_EDUC_DIST_ANTONIO_VAN_UDEN","size":23,"imports":[]},
-{ "name": "bogota.FONTIBON.CENT_EDUC_DIST_RODRIGO_ARENAS_BETANCOURT","size":57,"imports":[]},
-{ "name": "bogota.FONTIBON.CENT_EDUC_DIST_PABLO_NERUDA","size":267,"imports":[]},
-{ "name": "bogota.FONTIBON.COL_CARLO_FEDERICI_(INST_EDUC_DIST)","size":274,"imports":[]},
+{ "name": "bogota.FONTIBON.colegio.GIMNASIO_MODELIA_REAL_-SEDE_PRINCIPAL","size":475,"imports":[]},
+{ "name": "bogota.FONTIBON.colegio.COL_DEPT_INTEGRADO_FONTIBON","size":11,"imports":[]},
+{ "name": "bogota.FONTIBON.colegio.CENT_EDUC_DIST_ANTONIO_VAN_UDEN","size":23,"imports":[]},
+{ "name": "bogota.FONTIBON.colegio.CENT_EDUC_DIST_RODRIGO_ARENAS_BETANCOURT","size":57,"imports":[]},
+{ "name": "bogota.FONTIBON.colegio.CENT_EDUC_DIST_PABLO_NERUDA","size":267,"imports":[]},
+{ "name": "bogota.FONTIBON.colegio.COL_CARLO_FEDERICI_(INST_EDUC_DIST)","size":274,"imports":[]},
 ]
