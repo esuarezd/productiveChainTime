@@ -1,0 +1,9 @@
+[
+{ "name": "bogota.BARRIOS_UNIDOS.COL_SANTA_ROSA_DE_LIMA","size":449,"imports":[]},
+{ "name": "bogota.BARRIOS_UNIDOS.COL_HARVARD","size":502,"imports":[]},
+{ "name": "bogota.BARRIOS_UNIDOS.LIC_FORMACION_EDUC_PERSONALIZADA","size":554,"imports":[]},
+{ "name": "bogota.BARRIOS_UNIDOS.COL_DIST_TOMAS_CARRASQUILLA","size":17,"imports":[]},
+{ "name": "bogota.BARRIOS_UNIDOS.COL_DIST_REP_DE_PANAMA","size":40,"imports":[]},
+{ "name": "bogota.BARRIOS_UNIDOS.COL_DIST_HELADIA_MEJIA_HIJOS_DE_EDUCADORES","size":102,"imports":[]},
+{ "name": "bogota.BARRIOS_UNIDOS.COL_DIST_RAFAEL_BERNAL_JIMENEZ","size":107,"imports":[]},
+]

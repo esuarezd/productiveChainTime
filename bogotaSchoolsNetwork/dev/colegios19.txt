@@ -1,0 +1,17 @@
+[
+{ "name": "bogota.CIUDAD_BOLIVAR.COL_LA_NUEVA_ESTANCIA","size":86,"imports":[]},
+{ "name": "bogota.CIUDAD_BOLIVAR.GIMN_BILING_OBREGON","size":267,"imports":[]},
+{ "name": "bogota.CIUDAD_BOLIVAR.NUEVO_COL_LUSADI","size":293,"imports":[]},
+{ "name": "bogota.CIUDAD_BOLIVAR.COL_POPULAR_BOLIVARIANO","size":294,"imports":[]},
+{ "name": "bogota.CIUDAD_BOLIVAR.LIC_LA_CORUNIA","size":345,"imports":[]},
+{ "name": "bogota.CIUDAD_BOLIVAR.INST_SANTA_MARIA_DE_LA_CRUZ","size":385,"imports":[]},
+{ "name": "bogota.CIUDAD_BOLIVAR.INST_DE_EDUC_ELEMENTAL_PREESCOLAR_Y_SECUNDARIA_INELPRES","size":462,"imports":[]},
+{ "name": "bogota.CIUDAD_BOLIVAR.CENT_EDUC_DIST_MANUELA_BELTRAN","size":125,"imports":[]},
+{ "name": "bogota.CIUDAD_BOLIVAR.CEDID_CIUDAD_BOLIVAR","size":147,"imports":[]},
+{ "name": "bogota.CIUDAD_BOLIVAR.CENT_EDUC_DIST_ISMAEL_PERDOMO","size":160,"imports":[]},
+{ "name": "bogota.CIUDAD_BOLIVAR.COL_DIST_EDUC_BAS_Y_MEDIA_ARBORIZADORA_ALTA","size":170,"imports":[]},
+{ "name": "bogota.CIUDAD_BOLIVAR.COL_ANTONIO_GARCIA_(INS_EDUC_DIST)","size":182,"imports":[]},
+{ "name": "bogota.CIUDAD_BOLIVAR.CENT_EDUC_DIST_CALASANZ_(BUENAVISTA)","size":204,"imports":[]},
+{ "name": "bogota.CIUDAD_BOLIVAR.CENT_EDUC_DIST_RAFAEL_URIBE_URIBE","size":217,"imports":[]},
+{ "name": "bogota.CIUDAD_BOLIVAR.CENT_EDUC_DIST_SOTAVENTO","size":250,"imports":[]},
+]

@@ -1,0 +1,17 @@
+[
+{ "name": "bogota.USME.INST_PEDAG_LA_REAL_SOCIEDAD_-SEDE_PRINCIPAL","size":281,"imports":[]},
+{ "name": "bogota.USME.COL_SANTA_LIBRADA","size":359,"imports":[]},
+{ "name": "bogota.USME.COL_ARIEL_DAVID","size":384,"imports":[]},
+{ "name": "bogota.USME.LIC_MARANATA","size":450,"imports":[]},
+{ "name": "bogota.USME.INST_EDUC_DIST_JUAN_LUIS_LONDONIO","size":108,"imports":[]},
+{ "name": "bogota.USME.CENT_EDUC_DIST_NUEVA_ESPERANZA","size":119,"imports":[]},
+{ "name": "bogota.USME.CENT_EDUC_DIST_SANTA_LIBRADA","size":120,"imports":[]},
+{ "name": "bogota.USME.COLEGIO_FERNANDO_GONZALEZ_OCHOA","size":124,"imports":[]},
+{ "name": "bogota.USME.ORLANDO_FALS_BORDA_(ANTES_BARRANQUILLITA)","size":130,"imports":[]},
+{ "name": "bogota.USME.CENT_EDUC_DIST_GRAN_YOMASA","size":176,"imports":[]},
+{ "name": "bogota.USME.CENT_EDUC_DIST_DON_BOSCO_IV","size":181,"imports":[]},
+{ "name": "bogota.USME.COL_DE_EDUC_BAS_Y_MEDIA_ESTANISLAO_ZULETA","size":216,"imports":[]},
+{ "name": "bogota.USME.INST_EDUC_DIST_EL_BOSQUE","size":228,"imports":[]},
+{ "name": "bogota.USME.COL_DIST_DE_USME","size":244,"imports":[]},
+{ "name": "bogota.USME.CENT_EDUC_DIST_MIRAVALLE","size":245,"imports":[]},
+]

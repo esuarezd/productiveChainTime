@@ -1,0 +1,13 @@
+[
+{ "name": "bogota.SAN_CRISTOBAL.CENT_EDUC_PARA_JOVENES_Y_ADULTOS_LEPANTO","size":9,"imports":[]},
+{ "name": "bogota.SAN_CRISTOBAL.INST_ACAD_BETHEL","size":112,"imports":[]},
+{ "name": "bogota.SAN_CRISTOBAL.COL_SUR_ORIENTAL_PANAMERICANO","size":319,"imports":[]},
+{ "name": "bogota.SAN_CRISTOBAL.COL_PARROQ_ADVENIAT","size":398,"imports":[]},
+{ "name": "bogota.SAN_CRISTOBAL.CENT_EDUC_DIST_FLORENTINO_GONZALEZ","size":28,"imports":[]},
+{ "name": "bogota.SAN_CRISTOBAL.CENT_EDUC_DIST_ALTAMIRA_SUR_ORIENTAL","size":137,"imports":[]},
+{ "name": "bogota.SAN_CRISTOBAL.COL_DIST_TOMAS_RUEDA_VARGAS","size":141,"imports":[]},
+{ "name": "bogota.SAN_CRISTOBAL.COL_DIST_EDUC_BAS_Y_MEDIA_LOS_ALPES","size":142,"imports":[]},
+{ "name": "bogota.SAN_CRISTOBAL.CENT_EDUC_DIST_JUAN_REY","size":177,"imports":[]},
+{ "name": "bogota.SAN_CRISTOBAL.CENT_EDUC_DIST_COMFENALCO_NUEVA_ROMA","size":187,"imports":[]},
+{ "name": "bogota.SAN_CRISTOBAL.CENT_EDUC_DIST_EL_RODEO","size":205,"imports":[]},
+]

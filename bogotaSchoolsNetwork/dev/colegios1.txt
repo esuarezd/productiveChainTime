@@ -1,0 +1,13 @@
+[
+{ "name": "bogota.USAQUEN.COL_MARIA_INMACULADA","size":202,"imports":[]},
+{ "name": "bogota.USAQUEN.COL_MAYOR_JOSE_CELESTINO_MUTIS","size":410,"imports":[]},
+{ "name": "bogota.USAQUEN.LIC_PSICOPEDAG_TIBABITA","size":540,"imports":[]},
+{ "name": "bogota.USAQUEN.COL_DE_LA_PRESENTACION_SANS_FACON","size":592,"imports":[]},
+{ "name": "bogota.USAQUEN.LIC_DE_CERVANTES_PADRES_AGUSTINOS","size":593,"imports":[]},
+{ "name": "bogota.USAQUEN.COL_PROVINMA","size":631,"imports":[]},
+{ "name": "bogota.USAQUEN.CENT_EDUC_NAL_PILOTO_BAVARIA","size":5,"imports":[]},
+{ "name": "bogota.USAQUEN.COL_DIST_TOBERIN","size":255,"imports":[]},
+{ "name": "bogota.USAQUEN.SALUDCOOP_NORTE_(INST_EDUC_DIST)","size":268,"imports":[]},
+{ "name": "bogota.USAQUEN.CENT_EDUC_DIST_DE_USAQUEN_(ANTIGUA_COLONIA_ESCOLAR_DE_VACACI","size":278,"imports":[]},
+{ "name": "bogota.USAQUEN.CENT_EDUC_DIST_PRADO_VERANIEGO_II","size":279,"imports":[]},
+]
