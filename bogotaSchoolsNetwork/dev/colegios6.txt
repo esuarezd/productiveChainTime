@@ -2,7 +2,7 @@
 { "name": "bogota.TUNJUELITO.FUND_INST_TECNOLOGICO_DEL_SUR","size":229,"imports":[]},
 { "name": "bogota.TUNJUELITO.GIMN_COMERCIAL_LOS_ANDES_-SEDE_PRINCIPAL","size":436,"imports":[]},
 { "name": "bogota.TUNJUELITO.CENT_EDUC_DIST_RUFINO_JOSE_CUERVO","size":27,"imports":[]},
-{ "name": "bogota.TUNJUELITO.COL_DIST_U.B._CIUDAD_DE_BOGOTA","size":74,"imports":[]},
+{ "name": "bogota.TUNJUELITO.COL_DIST_U-B-_CIUDAD_DE_BOGOTA","size":74,"imports":[]},
 { "name": "bogota.TUNJUELITO.CENT_EDUC_DIST_ISLA_DEL_SOL","size":233,"imports":[]},
 { "name": "bogota.TUNJUELITO.INST_TEC_IND_PILOTO","size":239,"imports":[]},
 ]
