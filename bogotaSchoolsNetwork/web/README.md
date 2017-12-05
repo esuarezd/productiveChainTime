@@ -1,51 +1,52 @@
-# productiveChainTime
-Visual Analytics for network data of exportation and importation of productive chain of coffe.
+# productiveChainData
+Visual Analytics for temporal data of exportation of productive chain of coffee.
 
-Propuesta tarea 4 - Visualización de redes
+Propuesta Tarea 2 - Visualización de datos
 Por Edison Suarez Ducon - 201627395
 
-What: datos
-------------------------
-dataset1. Tabla con Importaciones de cadena de producción de cafe.
-https://www.datos.gov.co/Agricultura-y-Desarrollo-Rural/Cadena-Productiva-Caf-Importaciones/gxbt-i3rd
+what: (datos)
+-------------------------
 
-dataset2. Tabla con Exportaciones de cadena de producción de cafe.
+dataset1: tablas de exportaciones 2016 de cacao:
+https://www.datos.gov.co/Agricultura-y-Desarrollo-Rural/Cadena-Productiva-Cacao-Exportaciones/chbq-w5mx
+
+dataset2- tablas de exportaciones 2016 de cafe :
 https://www.datos.gov.co/Agricultura-y-Desarrollo-Rural/Cadena-Productiva-Caf-Exportaciones/gzwq-vje7
 
-Atributos dataset1 (importaciones): anio,mes,CodigoPais, PaisOrigen, CodigoDepartamento, DepartamentoDestino, Partida, Cadena, Producto, CodigoUnidad, CantidadUnidad, ValorMilesCIFDol, ValorMilesPesos, ValorMilesFOBDol, VolúmenToneladas.
-items dataset1: 1.345 rows con datos correspondientes entre 2006 Enero hasta 2017 Junio.
+Dataset3- tablas de exportaciones 2016 de Algodon : https://www.datos.gov.co/Agricultura-y-Desarrollo-Rural/Cadena-Productiva-Algod-n-Exportaciones/ttwt-pzeg
 
-Atributos dataset2 (exportaciones): anio,mes,CodigoPais, PaisDestino, CodigoDepartamento, DepartamentoOrigen, Partida, Cadena, Producto, CodigoUnidad, CantidadUnidad, ValorMilesCIFDol, ValorMilesPesos, ValorMilesFOBDol, VolúmenToneladas.
-Items dataset2: 37.012 rows con datos correspondientes entre 2006 Enero hasta 2017 Junio.
+Dataset4- tablas de exportaciones 2006 de Flores:
+https://www.datos.gov.co/Agricultura-y-Desarrollo-Rural/Cadena-Productiva-Flores-Exportaciones/hieb-cqrb
 
-Para acondicionarlo a una network, se tiene entonces:
-Del dataset1(importaciones) se filtran los datos por Anio = 2017.
-name  :  colombia.DepartamentoDestino.
-Size: Suma de VolumenToneladas
-Imports: PaisOrigen1, PaisOrigen2, ...
+Atributos del dataset-type tabla : anio,mes,CodigoPais, PaisDestino, CodigoDepartamento, DepartamentoOrigen, Partida, Cadena, Producto, CodigoUnidad, CantidadUnidad, ValorMilesCIFDol, ValorMilesPesos, ValorMilesFOBDol, VolúmenToneladas.
+Items de todos los datasets: Filtro items donde anio = 2016.
 
-Y del dataset2 (exportaciones) se filtran los datos por Anio = 2017
-name  :  clusterN.PaisDestino.
-Size: Suma de VolumenToneladas
-Imports: DepartamentoOrigen1, DepartamentoOrigen2, ….
+Adecuaciones: Se crea un nuevo dataset con los atributos anio, PaisDestino, Cacao, Algodon, Flores, Cafe. Donde:
+anio:= 2016
+PaisDestino:= Lista de paises a donde se exporto en 2016
+Cacao:= suma de ValorMilesPesos del PaisDestino corespondiente en el año 2016 para la cadena  "Cacao y su Industria". En excel fue asi: =SUMAR.SI.CONJUNTO(exp!$M$2:$M$620373;exp!$A$2:$A$620373;$A4;exp!$D$2:$D$620373;$C4;exp!$H$2:$H$620373;"Cacao y su Industria").
+Algodon:= suma de ValorMilesPesos del PaisDestino corespondiente en el año 2016 para la cadena  "Algodon - Textiles - Confecciones.". En excel fue asi: =SUMAR.SI.CONJUNTO(exp!$M$2:$M$620373;exp!$A$2:$A$620373;$A4;exp!$D$2:$D$620373;$C4;exp!$H$2:$H$620373;"Algodon - Textiles - Confecciones.")
+Flores:= suma de ValorMilesPesos del PaisDestino corespondiente en el año 2016 para la cadena  "Flores y Follajes". En excel fue asi: =SUMAR.SI.CONJUNTO(exp!$M$2:$M$620373;exp!$A$2:$A$620373;$A4;exp!$D$2:$D$620373;$C4;exp!$H$2:$H$620373;"Flores y Follajes")
+Cafe:= suma de ValorMilesPesos del PaisDestino corespondiente en el año 2016 para la cadena  "Cafe". En excel fue asi: =SUMAR.SI.CONJUNTO(exp!$M$2:$M$620373;exp!$A$2:$A$620373;$A4;exp!$D$2:$D$620373;$C4;exp!$H$2:$H$620373;"Cafe")
 
-Cada nodo se agrupa segun la region del mundo. Se definen cinco grupos: 1)Departamentos de Colombia, 2)Suramerica, 3)Norteamerica, 4)Europa, 5)Africa, 6)Asia.
 
 Why: tareas
 ------------------------
-Tarea1. Explore topology. Con esta conexiones se muestran los países importan de cada uno de los departamentos.
-
-Tarea2. Explore topology. Con esta conexiones se muestran a los países a los que exporta cada uno de los departamentos.
-
-- Hipotesis: No necesariamente el pais que mas importe cafe es el compra de todos los departamentos.
+Tarea1. Compare similarities. Comparar exportaciones totales entre los paises a los que mas se exporta.
+Tarea2. Compare similarities. Comparar exportaciones de cada cadena de produccion para cada continente.
 
 How:
 ------------------------
-Tarea 1 y 2. Hierarchical Edge Bundling
-Marcas: Lineas de conexion entre paises y departamentos
+Tarea1: Pipe Chart
+Marcas: areas para cada PaisDestino
 Canales:
-Posicion: Para la vsualizacion de orden por SIZE, se ordena de izquierda a derecha cada grupo de paises, de manera descendente.
-Color azul en el enlace. Verde para enlaces que entran (importaciones). Rojo para enlaces que salen (exportaciones).
+Posicion: Ordenanda de manera descendente con las manecillas del reloj.
+Color : Para cada pais de continente. Azul de manera degradada: America (azul más oscuro oscuro),..., Europa (azul las claro)
+Size: Area. Porción de los milesPesos exportados a este pasis en comparación a los demas paises.
 
-
-En la pagina, se le presenta al usuario la posibilidad de ver la red ordenando por enlaces o por tamaño. Ordernar por enlaces (SortByImports) muestra de manera descendente los paises que compran productos de cada de los departamentos. En el ordenamiento por tamaño, se muestran de manera descentende (de izquierda a derecha) los paises que mas compran cafe.
+Tarea2. Stacked barchart
+Marcas: Longitud para cada cadena de produccion.
+Canales:
+Posicion: Ordenados en el eje horizontal para cada pais. y en cada pais, puestos en pila uno sobre otro.
+Color: Para cada cadena.  Azul de manera degradada: Cacao (azul más oscuro oscuro),..., Cafe (azul las claro)
+Size: Longitud numerica de cada exportacion en dolares.
